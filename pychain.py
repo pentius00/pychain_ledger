@@ -171,17 +171,17 @@ pychain = setup()
 
 # @TODO:
 # Add an input area where you can get a value for `sender` from the user.
-input_data = st.text_input("Sender")
+Sender = st.text_input("Sender")
 
 
 # @TODO:
 # Add an input area where you can get a value for `receiver` from the user.
-input_data = st.text_input("Reciver")
+Receiver = st.text_input("Reciver")
 
 
 # @TODO:
 # Add an input area where you can get a value for `amount` from the user.
-input_data = st.text_input("Amount")
+Amount = st.text_input("Amount")
 
 if st.button("Add Block"):
     prev_block = pychain.chain[-1]
@@ -194,6 +194,9 @@ if st.button("Add Block"):
     new_block = Block(
         record=Record,
         creator_id=42,
+        semder,
+        receiver,
+        amount,
         prev_hash=prev_block_hash
     )
 
